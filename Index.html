@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Animations Playground</title>
+<style>
+body{
+  background:#111;
+  font-family:Arial;
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  padding:30px;
+  color:white;
+}
+.box{
+  width:120px;
+  height:120px;
+  background:#4f46e5;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+/* 1 Fade */
+.fade{animation:fade 2s infinite alternate;}
+@keyframes fade{from{opacity:0.2}to{opacity:1}}
+
+/* 2 Slide */
+.slide{animation:slide 2s infinite alternate;}
+@keyframes slide{from{transform:translateX(-40px)}to{transform:translateX(40px)}}
+
+/* 3 Bounce */
+.bounce{animation:bounce 1s infinite;}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
+
+/* 4 Rotate */
+.rotate{animation:rotate 2s linear infinite;}
+@keyframes rotate{to{transform:rotate(360deg)}}
+
+/* 5 Pulse */
+.pulse{animation:pulse 1.5s infinite;}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
+
+/* 6 Shake */
+.shake{animation:shake .5s infinite;}
+@keyframes shake{0%{transform:translateX(0)}25%{transform:translateX(-5px)}50%{transform:translateX(5px)}75%{transform:translateX(-5px)}}
+
+/* 7 Flip */
+.flip{animation:flip 2s infinite;}
+@keyframes flip{to{transform:rotateY(360deg)}}
+
+/* 8 Glow */
+.glow{animation:glow 1.5s infinite alternate;}
+@keyframes glow{from{box-shadow:0 0 5px cyan}to{box-shadow:0 0 25px cyan}}
+
+/* 9 Float */
+.float{animation:float 3s infinite ease-in-out;}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+
+/* 10 Skew */
+.skew{animation:skew 2s infinite alternate;}
+@keyframes skew{from{transform:skewX(0deg)}to{transform:skewX(20deg)}}
+
+/* 11 Zoom In */
+.zoomin{animation:zoomin 2s infinite;}
+@keyframes zoomin{from{transform:scale(.5)}to{transform:scale(1.2)}}
+
+/* 12 Zoom Out */
+.zoomout{animation:zoomout 2s infinite;}
+@keyframes zoomout{from{transform:scale(1.2)}to{transform:scale(.6)}}
+
+/* 13 Wobble */
+.wobble{animation:wobble 1.5s infinite;}
+@keyframes wobble{0%{transform:rotate(0)}25%{transform:rotate(5deg)}50%{transform:rotate(-5deg)}}
+
+/* 14 Flash */
+.flash{animation:flash 1s infinite;}
+@keyframes flash{0%,100%{opacity:1}50%{opacity:0}}
+
+/* 15 Swing */
+.swing{animation:swing 2s infinite;}
+@keyframes swing{20%{transform:rotate(15deg)}40%{transform:rotate(-10deg)}}
+
+/* 16 Ripple */
+.ripple{animation:ripple 1.5s infinite;}
+@keyframes ripple{from{box-shadow:0 0 0 0 rgba(255,255,255,.7)}to{box-shadow:0 0 0 20px rgba(255,255,255,0)}}
+
+/* 17 Loader */
+.loader{border-radius:50%; border:5px solid #333; border-top:5px solid white; animation:spin 1s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* 18 Gradient */
+.gradient{background:linear-gradient(270deg,red,blue,green); background-size:600% 600%; animation:grad 5s infinite;}
+@keyframes grad{0%{background-position:0%}50%{background-position:100%}100%{background-position:0%}}
+
+/* 19 Tilt */
+.tilt{animation:tilt 2s infinite alternate;}
+@keyframes tilt{from{transform:rotateX(0)}to{transform:rotateX(30deg)}}
+
+/* 20 Pop */
+.pop{animation:pop .8s infinite;}
+@keyframes pop{50%{transform:scale(1.4)}}
+</style>
+</head>
+<body>
+
+<div class="box fade">Fade</div>
+<div class="box slide">Slide</div>
+<div class="box bounce">Bounce</div>
+<div class="box rotate">Rotate</div>
+<div class="box pulse">Pulse</div>
+<div class="box shake">Shake</div>
+<div class="box flip">Flip</div>
+<div class="box glow">Glow</div>
+<div class="box float">Float</div>
+<div class="box skew">Skew</div>
+<div class="box zoomin">ZoomIn</div>
+<div class="box zoomout">ZoomOut</div>
+<div class="box wobble">Wobble</div>
+<div class="box flash">Flash</div>
+<div class="box swing">Swing</div>
+<div class="box ripple">Ripple</div>
+<div class="box loader"></div>
+<div class="box gradient">Grad</div>
+<div class="box tilt">Tilt</div>
+<div class="box pop">Pop</div>
+
+</body>
+</html>
